@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Contable</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#inicio" aria-label="Sistema Contable">
+          <span class="brand-mark">SC</span>
+          <span>Sistema Contable</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#descargas">Descargas</a>
+          <a href="#instalacion">Instalacion</a>
+          <a class="nav-button" href="assets/Sistema_Contable.xlsx" download>Excel</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">Hoja de calculo + Apps Script + HTML</p>
+          <h1>Sistema Contable listo para subir a Google Drive</h1>
+          <p>
+            Controla ingresos, gastos, facturas, clientes, proveedores y categorias
+            con una hoja organizada y un panel HTML para registrar datos rapidamente.
+          </p>
+          <div class="hero-actions">
+            <a class="primary" href="assets/Sistema_Contable_Entrega.zip" download>Descargar paquete completo</a>
+            <a class="secondary" href="assets/Sistema_Contable.xlsx" download>Descargar Excel</a>
+          </div>
+        </div>
+
+        <div class="dashboard-preview" aria-label="Vista previa del dashboard">
+          <div class="preview-top">
+            <span></span>
+            <strong>Dashboard</strong>
+            <em>COP</em>
+          </div>
+          <div class="metric-row">
+            <article>
+              <span>Ingresos</span>
+              <strong>COP 2,330,000</strong>
+            </article>
+            <article>
+              <span>Gastos</span>
+              <strong>COP 703,000</strong>
+            </article>
+            <article>
+              <span>Utilidad</span>
+              <strong>COP 1,627,000</strong>
+            </article>
+          </div>
+          <div class="chart-card">
+            <div class="bar one"></div>
+            <div class="bar two"></div>
+            <div class="bar three"></div>
+            <div class="bar four"></div>
+            <div class="bar five"></div>
+          </div>
+          <div class="mini-table">
+            <span>Ventas</span><strong>COP 1,790,000</strong>
+            <span>Compras</span><strong>-COP 420,000</strong>
+            <span>Facturas pendientes</span><strong>COP 948,000</strong>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="descargas">
+        <div class="section-head">
+          <p class="eyebrow">Entregables</p>
+          <h2>Archivos listos</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="icon">XL</span>
+            <h3>Hoja contable</h3>
+            <p>Excel con Dashboard, Movimientos, Facturas, Clientes, Proveedores, Categorias y Configuracion.</p>
+            <a href="assets/Sistema_Contable.xlsx" download>Descargar Sistema_Contable.xlsx</a>
+          </article>
+          <article class="card">
+            <span class="icon">AS</span>
+            <h3>Apps Script</h3>
+            <p>Codigo del panel HTML y funciones para registrar movimientos y facturas desde Google Sheets.</p>
+            <a href="assets/Sistema_Contable_Entrega.zip" download>Descargar paquete completo</a>
+          </article>
+          <article class="card">
+            <span class="icon">GD</span>
+            <h3>Instalacion en Drive</h3>
+            <p>Guia corta para convertir el Excel a Google Sheets y pegar el Apps Script vinculado.</p>
+            <a href="assets/INSTALACION_Sistema_Contable.md" download>Descargar guia</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="instalacion">
+        <div>
+          <p class="eyebrow">Pasos</p>
+          <h2>Como dejarlo funcionando en Google Drive</h2>
+          <p class="muted">La pagina puede publicarse en GitHub Pages, pero la hoja y el Apps Script deben instalarse dentro de tu Google Drive para funcionar como sistema real.</p>
+        </div>
+        <ol class="steps">
+          <li>Sube <strong>Sistema_Contable.xlsx</strong> a Google Drive.</li>
+          <li>Abre el archivo y conviertelo a <strong>Hojas de calculo de Google</strong>.</li>
+          <li>En la hoja abre <strong>Extensiones &gt; Apps Script</strong>.</li>
+          <li>Pega los archivos del ZIP: <strong>Code.gs</strong>, <strong>Index.html</strong>, <strong>Styles.html</strong> y <strong>Client.html</strong>.</li>
+          <li>Ejecuta <strong>ensureSetup</strong>, acepta permisos y recarga la hoja.</li>
+          <li>Usa el menu <strong>Sistema Contable &gt; Abrir panel</strong>.</li>
+        </ol>
+      </section>
+
+      <section class="section whatsapp">
+        <div>
+          <p class="eyebrow">Compartir</p>
+          <h2>Mensaje para WhatsApp</h2>
+          <p id="waText">Hola, ya quedo listo el Sistema Contable. Link de la pagina: pega aqui el link de GitHub Pages. Link de la hoja en Drive: pega aqui el link de Google Sheets.</p>
+        </div>
+        <div class="wa-actions">
+          <button id="copyMessage" type="button">Copiar mensaje</button>
+          <a id="waLink" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Sistema Contable sin IA</span>
+      <span>Hecho para Google Sheets + Apps Script</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
