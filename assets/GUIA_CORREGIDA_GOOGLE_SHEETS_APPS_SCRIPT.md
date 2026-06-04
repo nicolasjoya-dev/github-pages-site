@@ -24,6 +24,7 @@ Tu enlace:
    - `Client.html`
    - `appsscript.json`
 7. En Apps Script ejecuta `setupSistemaContable`.
+   Si la hoja ya quedo creada a medias, ejecuta mejor `repararSistemaContable`.
 8. Acepta permisos.
 9. Recarga la hoja.
 10. Usa el menu `Sistema Contable > Abrir panel`.
@@ -58,10 +59,18 @@ Eso permite que un Apps Script independiente intente trabajar sobre esa hoja. Si
 
 ## Funcion principal corregida
 
-La funcion clave ahora es:
+La funcion clave para crear desde cero es:
 
 ```js
 setupSistemaContable()
 ```
 
 Esa funcion crea o reconstruye toda la estructura desde cero dentro de una hoja Google Sheets nativa. Ya no depende de que el Excel importado conserve bien tablas, filtros o formatos.
+
+Si ya ves pestanas creadas pero estan vacias, sin encabezados o con `#ERROR!`, usa esta:
+
+```js
+repararSistemaContable()
+```
+
+Esta version tambien deja las formulas en espanol para Google Sheets configurado en Colombia.
